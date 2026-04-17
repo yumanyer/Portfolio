@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuel Pisoni | Backend Developer</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor-follower"></div>
+    
+    <nav id="navbar">
+        <div class="container">
+            <div class="logo">MP<span>.dev</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="reveal">Hola, soy</h2>
+                <h1 class="reveal">Manuel Pisoni</h1>
+                <h3 class="reveal">Backend Developer | Node.js · Java · Spring Boot</h3>
+                <p class="reveal">Especializado en diseñar y construir sistemas escalables, automatización e integración de IA.</p>
+                <div class="hero-btns reveal">
+                    <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
+                    <a href="#contact" class="btn btn-outline">Contactar</a>
+                </div>
+            </div>
+            <div class="hero-visual reveal">
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="code-content">
+                        <pre><code><span class="keyword">const</span> developer = {
+  name: <span class="string">'Manuel Pisoni'</span>,
+  role: <span class="string">'Backend Developer'</span>,
+  skills: [<span class="string">'Node.js'</span>, <span class="string">'Java'</span>, <span class="string">'SQL'</span>],
+  passion: <span class="string">'Scalable Systems'</span>
+};
+
+<span class="keyword">function</span> <span class="function">solve</span>(problem) {
+  <span class="keyword">return</span> <span class="string">'Efficient Solution'</span>;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">Sobre Mí</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Soy Backend Developer enfocado en diseñar y construir sistemas que resuelven problemas reales de negocio. Trabajo principalmente en desarrollo de APIs, lógica de negocio, automatización de procesos e integración entre servicios.</p>
+                    <p>Tengo experiencia construyendo sistemas backend con tecnologías como Node.js, Java (Spring Boot), SQL, MongoDB y Linux, desarrollando soluciones que conectan aplicaciones y permiten escalar productos digitales.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">APIs</span>
+                        <span class="stat-desc">RESTful Design</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">IA</span>
+                        <span class="stat-desc">Integrations</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">Auto</span>
+                        <span class="stat-desc">Pipelines</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title">Habilidades Técnicas</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-tags">
+                        <span>Node.js</span>
+                        <span>Java</span>
+                        <span>Spring Boot</span>
+                        <span>Python</span>
+                        <span>APIs REST</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Data & Infra</h3>
+                    <div class="skill-tags">
+                        <span>PostgreSQL</span>
+                        <span>MongoDB</span>
+                        <span>SQL</span>
+                        <span>Docker</span>
+                        <span>Linux</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Otros</h3>
+                    <div class="skill-tags">
+                        <span>Web Scraping</span>
+                        <span>Automation</span>
+                        <span>React.js</span>
+                        <span>Git</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>IA Landing Page Generator</h3>
+                        <p>Desarrollo de una IA para generación automática de landing pages. Automatización de entrenamiento, scraping de datasets e integración con WordPress.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Node.js</span>
+                            <span>Scraping</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Farcaster Price Comparison</h3>
+                        <p>Herramienta para comparar precios en gastronomía integrada con Farcaster y BASE mediante metadata específica.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Farcaster</span>
+                            <span>APIs</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>MANUS-TILES</h3>
+                        <p>Aplicación web con seguimiento de mano y control de un piano virtual en tiempo real usando WebSockets.</p>
+                        <div class="project-tags">
+                            <span>JavaScript</span>
+                            <span>WebSockets</span>
+                            <span>MediaPipe</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Hairdeluxe Coupon System</h3>
+                        <p>Sistema de cupones con estados automáticos y exportación a Excel para gestión de promociones.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>Tkinter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <p>¿Tienes un proyecto en mente o buscas un desarrollador backend para tu equipo?</p>
+                    <div class="contact-links">
+                        <a href="mailto:manuelpisoni09@gmail.com" class="contact-item">
+                            <strong>Email:</strong> manuelpisoni09@gmail.com
+                        </a>
+                        <a href="https://www.linkedin.com/in/manuelpisoni" target="_blank" class="contact-item">
+                            <strong>LinkedIn:</strong> manuelpisoni
+                        </a>
+                        <div class="contact-item">
+                            <a href="https://github.com/Yumanyer" target="_blank" class="contact-item">
+                                <strong>Github:</strong>Yumanyer
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Manuel Pisoni</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
