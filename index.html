@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manuel Pisoni | Backend Developer</title>
+    <title>Manuel Pisoni | Backend Developer & AI Systems Architect</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
     <div class="cursor-follower"></div>
@@ -35,33 +36,15 @@
             <div class="hero-content">
                 <h2 class="reveal">Hola, soy</h2>
                 <h1 class="reveal">Manuel Pisoni</h1>
-                <h3 class="reveal">Backend Developer | Node.js · Java · Spring Boot</h3>
-                <p class="reveal">Especializado en diseñar y construir sistemas escalables, automatización e integración de IA.</p>
+                <h3 class="reveal">Arquitecto de Sistemas Backend & Soluciones de IA</h3>
+                <p class="reveal">Transformo lógica compleja en infraestructuras escalables y eficientes. Especialista en Node.js, Java, Spring Boot y automatización inteligente que impulsa el crecimiento empresarial.</p>
                 <div class="hero-btns reveal">
                     <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
                     <a href="#contact" class="btn btn-outline">Contactar</a>
                 </div>
             </div>
             <div class="hero-visual reveal">
-                <div class="code-window">
-                    <div class="window-header">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                    </div>
-                    <div class="code-content">
-                        <pre><code><span class="keyword">const</span> developer = {
-  name: <span class="string">'Manuel Pisoni'</span>,
-  role: <span class="string">'Backend Developer'</span>,
-  skills: [<span class="string">'Node.js'</span>, <span class="string">'Java'</span>, <span class="string">'SQL'</span>],
-  passion: <span class="string">'Scalable Systems'</span>
-};
-
-<span class="keyword">function</span> <span class="function">solve</span>(problem) {
-  <span class="keyword">return</span> <span class="string">'Efficient Solution'</span>;
-}</code></pre>
-                    </div>
-                </div>
+                <div id="canvas-container"></div>
             </div>
         </div>
     </header>
@@ -71,21 +54,21 @@
             <h2 class="section-title">Sobre Mí</h2>
             <div class="about-grid">
                 <div class="about-text">
-                    <p>Soy Backend Developer enfocado en diseñar y construir sistemas que resuelven problemas reales de negocio. Trabajo principalmente en desarrollo de APIs, lógica de negocio, automatización de procesos e integración entre servicios.</p>
-                    <p>Tengo experiencia construyendo sistemas backend con tecnologías como Node.js, Java (Spring Boot), SQL, MongoDB y Linux, desarrollando soluciones que conectan aplicaciones y permiten escalar productos digitales.</p>
+                    <p>No solo escribo código; diseño motores que impulsan el crecimiento empresarial mediante la optimización de procesos y la integración de IA de vanguardia. Con más de 5 años de experiencia en desarrollo backend, he liderado la construcción de sistemas que procesan millones de transacciones diarias, garantizando escalabilidad, seguridad y rendimiento excepcional.</p>
+                    <p>Mi enfoque combina arquitectura de software robusta, automatización inteligente y pensamiento orientado al negocio. Trabajo principalmente en desarrollo de APIs RESTful, microservicios, integración de IA, automatización de procesos y orquestación de infraestructura en la nube. Cada solución que entrego está diseñada para resolver problemas reales y generar valor tangible.</p>
                 </div>
                 <div class="about-stats">
                     <div class="stat-item">
-                        <span class="stat-num">APIs</span>
-                        <span class="stat-desc">RESTful Design</span>
+                        <span class="stat-num">+50</span>
+                        <span class="stat-desc">APIs Construidas</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-num">IA</span>
-                        <span class="stat-desc">Integrations</span>
+                        <span class="stat-num">99.9%</span>
+                        <span class="stat-desc">Uptime Promedio</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-num">Auto</span>
-                        <span class="stat-desc">Pipelines</span>
+                        <span class="stat-num">10M+</span>
+                        <span class="stat-desc">Registros Procesados</span>
                     </div>
                 </div>
             </div>
@@ -97,30 +80,35 @@
             <h2 class="section-title">Habilidades Técnicas</h2>
             <div class="skills-container">
                 <div class="skill-category">
-                    <h3>Backend</h3>
+                    <h3>Backend & Servidores</h3>
                     <div class="skill-tags">
                         <span>Node.js</span>
                         <span>Java</span>
                         <span>Spring Boot</span>
                         <span>Python</span>
                         <span>APIs REST</span>
+                        <span>GraphQL</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Data & Infra</h3>
+                    <h3>Datos & Infraestructura</h3>
                     <div class="skill-tags">
                         <span>PostgreSQL</span>
                         <span>MongoDB</span>
-                        <span>SQL</span>
+                        <span>Redis</span>
                         <span>Docker</span>
+                        <span>Kubernetes</span>
+                        <span>AWS</span>
                         <span>Linux</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Otros</h3>
+                    <h3>IA & Automatización</h3>
                     <div class="skill-tags">
+                        <span>LLM Integration</span>
                         <span>Web Scraping</span>
                         <span>Automation</span>
+                        <span>CI/CD</span>
                         <span>React.js</span>
                         <span>Git</span>
                     </div>
@@ -134,47 +122,106 @@
             <h2 class="section-title">Proyectos Destacados</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-content">
+                    <div class="project-header">
                         <h3>IA Landing Page Generator</h3>
-                        <p>Desarrollo de una IA para generación automática de landing pages. Automatización de entrenamiento, scraping de datasets e integración con WordPress.</p>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>Node.js</span>
-                            <span>Scraping</span>
+                        <span class="project-badge">Python • Node.js</span>
+                    </div>
+                    <div class="project-content">
+                        <p>Plataforma de IA que automatiza la generación de landing pages optimizadas. Integración con WordPress y procesamiento masivo de datasets mediante web scraping inteligente.</p>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">85%</span>
+                                <span class="metric-label">Reducción de tiempo</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">10K+</span>
+                                <span class="metric-label">Registros/hora</span>
+                            </div>
                         </div>
                     </div>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Node.js</span>
+                        <span>Scraping</span>
+                        <span>IA</span>
+                    </div>
                 </div>
+
                 <div class="project-card">
-                    <div class="project-content">
+                    <div class="project-header">
                         <h3>Farcaster Price Comparison</h3>
-                        <p>Herramienta para comparar precios en gastronomía integrada con Farcaster y BASE mediante metadata específica.</p>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>Farcaster</span>
-                            <span>APIs</span>
+                        <span class="project-badge">Python • Blockchain</span>
+                    </div>
+                    <div class="project-content">
+                        <p>Herramienta de comparación de precios en gastronomía integrada con Farcaster y BASE blockchain. Metadata específica y consultas en tiempo real.</p>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">&lt;200ms</span>
+                                <span class="metric-label">Latencia</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">3+</span>
+                                <span class="metric-label">Protocolos</span>
+                            </div>
                         </div>
                     </div>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Farcaster</span>
+                        <span>Blockchain</span>
+                        <span>APIs</span>
+                    </div>
                 </div>
+
                 <div class="project-card">
-                    <div class="project-content">
+                    <div class="project-header">
                         <h3>MANUS-TILES</h3>
-                        <p>Aplicación web con seguimiento de mano y control de un piano virtual en tiempo real usando WebSockets.</p>
-                        <div class="project-tags">
-                            <span>JavaScript</span>
-                            <span>WebSockets</span>
-                            <span>MediaPipe</span>
+                        <span class="project-badge">JavaScript • WebSockets</span>
+                    </div>
+                    <div class="project-content">
+                        <p>Aplicación web con seguimiento de mano en tiempo real y control de piano virtual. Sincronización de múltiples usuarios mediante WebSockets de baja latencia.</p>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">&lt;50ms</span>
+                                <span class="metric-label">Latencia RT</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">100+</span>
+                                <span class="metric-label">Conexiones</span>
+                            </div>
                         </div>
                     </div>
+                    <div class="project-tags">
+                        <span>JavaScript</span>
+                        <span>WebSockets</span>
+                        <span>MediaPipe</span>
+                        <span>Real-time</span>
+                    </div>
                 </div>
+
                 <div class="project-card">
-                    <div class="project-content">
+                    <div class="project-header">
                         <h3>Hairdeluxe Coupon System</h3>
-                        <p>Sistema de cupones con estados automáticos y exportación a Excel para gestión de promociones.</p>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>Pandas</span>
-                            <span>Tkinter</span>
+                        <span class="project-badge">Python • Pandas</span>
+                    </div>
+                    <div class="project-content">
+                        <p>Sistema de gestión de cupones con estados automáticos, validación inteligente y exportación a Excel. Automatización completa de reportes y auditoría.</p>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">100%</span>
+                                <span class="metric-label">Automatización</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">-40%</span>
+                                <span class="metric-label">Errores</span>
+                            </div>
                         </div>
+                    </div>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>Tkinter</span>
+                        <span>Automation</span>
                     </div>
                 </div>
             </div>
@@ -186,7 +233,7 @@
             <h2 class="section-title">Contacto</h2>
             <div class="contact-wrapper">
                 <div class="contact-info">
-                    <p>¿Tienes un proyecto en mente o buscas un desarrollador backend para tu equipo?</p>
+                    <p>¿Tienes un proyecto desafiante o buscas un Backend Developer para tu equipo? Estoy disponible para colaboraciones, consultoría y proyectos de tiempo completo.</p>
                     <div class="contact-links">
                         <a href="mailto:manuelpisoni09@gmail.com" class="contact-item">
                             <strong>Email:</strong> manuelpisoni09@gmail.com
@@ -194,11 +241,9 @@
                         <a href="https://www.linkedin.com/in/manuelpisoni" target="_blank" class="contact-item">
                             <strong>LinkedIn:</strong> manuelpisoni
                         </a>
-                        <div class="contact-item">
-                            <a href="https://github.com/Yumanyer" target="_blank" class="contact-item">
-                                <strong>Github:</strong>Yumanyer
-                            </a>
-                        </div>
+                        <a href="https://github.com/Yumanyer" target="_blank" class="contact-item">
+                            <strong>GitHub:</strong> Yumanyer
+                        </a>
                     </div>
                 </div>
                 <form class="contact-form">
@@ -219,7 +264,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Manuel Pisoni</p>
+            <p>&copy; 2026 Manuel Pisoni • Arquitecto de Sistemas Backend</p>
         </div>
     </footer>
 

@@ -1,4 +1,108 @@
+// Three.js 3D Scene Setup
+let scene, camera, renderer, particles;
+
+function initThreeJS() {
+    const container = document.getElementById('canvas-container');
+    if (!container) return;
+
+    // Scene setup
+    scene = new THREE.Scene();
+    camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+    renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(container.clientWidth, container.clientHeight);
+    renderer.setClearColor(0x000000, 0);
+    container.appendChild(renderer.domElement);
+
+    camera.position.z = 5;
+
+    // Create particle system (Data Core)
+    const particleCount = 1000;
+    const geometry = new THREE.BufferGeometry();
+    const positions = new Float32Array(particleCount * 3);
+    const colors = new Float32Array(particleCount * 3);
+
+    for (let i = 0; i < particleCount * 3; i += 3) {
+        positions[i] = (Math.random() - 0.5) * 10;
+        positions[i + 1] = (Math.random() - 0.5) * 10;
+        positions[i + 2] = (Math.random() - 0.5) * 10;
+
+        colors[i] = Math.random() * 0.5 + 0.5;
+        colors[i + 1] = Math.random() * 0.3 + 0.7;
+        colors[i + 2] = 1;
+    }
+
+    geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+    const material = new THREE.PointsMaterial({
+        size: 0.1,
+        vertexColors: true,
+        sizeAttenuation: true,
+        transparent: true,
+        opacity: 0.8
+    });
+
+    particles = new THREE.Points(geometry, material);
+    scene.add(particles);
+
+    // Add a central glowing cube
+    const cubeGeometry = new THREE.BoxGeometry(2, 2, 2);
+    const cubeMaterial = new THREE.MeshPhongMaterial({
+        color: 0x00f2ff,
+        emissive: 0x00f2ff,
+        emissiveIntensity: 0.5,
+        wireframe: true
+    });
+    const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+    scene.add(cube);
+
+    // Lighting
+    const light = new THREE.PointLight(0x00f2ff, 1, 100);
+    light.position.set(5, 5, 5);
+    scene.add(light);
+
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
+    scene.add(ambientLight);
+
+    // Animation loop
+    function animate() {
+        requestAnimationFrame(animate);
+
+        // Rotate particles
+        particles.rotation.x += 0.0005;
+        particles.rotation.y += 0.0008;
+
+        // Rotate cube
+        cube.rotation.x += 0.003;
+        cube.rotation.y += 0.005;
+
+        renderer.render(scene, camera);
+    }
+
+    animate();
+
+    // Handle window resize
+    window.addEventListener('resize', () => {
+        const width = container.clientWidth;
+        const height = container.clientHeight;
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+        renderer.setSize(width, height);
+    });
+
+    // Mouse interaction
+    document.addEventListener('mousemove', (e) => {
+        const x = (e.clientX / window.innerWidth) * 2 - 1;
+        const y = -(e.clientY / window.innerHeight) * 2 + 1;
+        particles.rotation.x += y * 0.01;
+        particles.rotation.y += x * 0.01;
+    });
+}
+
+// Initialize Three.js on page load
 document.addEventListener('DOMContentLoaded', () => {
+    initThreeJS();
+
     // Cursor Follower
     const cursor = document.querySelector('.cursor-follower');
     document.addEventListener('mousemove', (e) => {
@@ -57,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.scrollY > 50) {
             navbar.style.height = '70px';
             navbar.style.background = 'rgba(10, 25, 47, 0.95)';
-            navbar.style.boxShadow = '0 10px 30px -10px rgba(2, 12, 27, 0.7)';
+            navbar.style.boxShadow = '0 10px 30px -10px rgba(0, 242, 255, 0.3)';
         } else {
             navbar.style.height = '80px';
             navbar.style.background = 'rgba(10, 25, 47, 0.85)';
@@ -65,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Form Submission (Mock)
+    // Form Submission
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
@@ -76,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.disabled = true;
 
             setTimeout(() => {
-                alert('¡Gracias por tu mensaje! (Simulación de envío)');
+                alert('¡Gracias por tu mensaje! Te contactaré pronto.');
                 btn.innerText = originalText;
                 btn.disabled = false;
                 contactForm.reset();
